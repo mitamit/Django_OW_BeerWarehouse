@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div>
+        {{company}}    <button class="btn btn-warning btn-sm"><a href="{% url 'company-edit-view' company.pk %}" style="color: white; text-decoration: none;">Editar</a></button>
+    </div> 
+{% endblock %}

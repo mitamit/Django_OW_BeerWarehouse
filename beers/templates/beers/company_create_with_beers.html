@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>Create Company with Beers</h3>
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+    {{form.as_p}}
+
+    <h4>Create Beers</h4>
+
+    {{ beer_formset.as_p}}
+
+    <input type="submit" value="Guardar">
+</form>
+
+
+
+{% endblock %}

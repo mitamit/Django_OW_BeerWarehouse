@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block content %}
+        {% now "j F Y H:i" %}
+        <hr>
+        <ul>
+            {% for company in company_list %}
+                {% comment %}
+                    ddfadsfasdfadsf
+                {% endcomment %}
+                <li>
+                    <a href="{% url 'company-detail-view' company.pk %}">{{company}}</a>
+                </li>
+        
+            {% empty %}
+                Esto será lo que se muestre si el argumento del bucle FOR está vacío
+            {% endfor %}
+        </ul>
+        <button class="btn btn-success"><a href="{% url 'company-create-view' %}" style="color: white; text-decoration: none;">Nuevo</a></button>
+
+{% endblock %}
